@@ -1,14 +1,18 @@
 import streamlit as st
 
 
-st.write(f'''
-        <a target="_self" href="https://acc-astra-kredit.streamlit.app/">
-            <button>
-                Kembali Ke Halaman Utama
-            </button>
-        </a>
-        ''',
-        unsafe_allow_html=True)   
+def navigate_to_website():
+    # Redirect to another website when the button is clicked
+    st.write("Redirecting to another website...")
+    # Use Python's `webbrowser` module to open a URL in a new tab
+    import webbrowser
+    webbrowser.open_new_tab('https://acc-astra-kredit.streamlit.app')
+
+
+# Add a button to the app
+if st.button("Navigate to Website"):
+    # When the button is clicked, call the navigate_to_website function
+    navigate_to_website() 
 
 st.write('Tidak minat karena DP tinggi')
 st.write('Untuk DP bapak/ibu bisa ambil paket SUPER HEMAT dimana DP dimulai dari 15% untuk seluruh unit tpyota dan daihatsu ')
